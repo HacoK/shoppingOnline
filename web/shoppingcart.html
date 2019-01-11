@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>My Home Page</title>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="layui/css/layui.css"  media="all">
+  <link rel="shortcut icon" href="img/favicon.png" />
+  <!-- 注意：如果你直接复制所有代码到本地，上述css路径需要改成你本地的 -->
+</head>
+<body onbeforeunload="leave()">
+
+<table class="layui-hide" id="test" lay-filter="test"></table>
+
+<script type="text/html" id="toolbarDemo">
+  <div class="layui-btn-container">
+    <button class="layui-btn layui-btn-sm" lay-event="checkBalance">Check Balance</button>
+    <button class="layui-btn layui-btn-sm" lay-event="clearShoppingcart">Clear Shoppingcart</button>
+  </div>
+</script>
+
+<script type="text/html" id="barDemo">
+  <a class="layui-btn layui-btn-xs" lay-event="edit">Edit</a>
+  <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">Delete</a>
+</script>
+
+<script src="layui/layui.js" charset="utf-8"></script>
+<!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
+<script src="js/jquery.min.js"></script>
+
+<script>
+  layui.use('table', function(){
+    var table = layui.table;
+
+    table.render({
+      elem: '#test'
+      ,url:'/Cart'
+      ,method:'get'
+      ,toolbar: '#toolbarDemo'
+      ,title: 'Shopping Cart'
+      ,totalRow: true
+      ,cols: [[
+        {type: 'checkbox', fixed: 'left'}
+        ,{field:'gid', title:'ID', fixed: 'left', unresize: true, sort: true, totalRowText: 'Total'}
+        ,{field:'name', title:'Name', sort: true}
+        ,{field:'price', title:'Price', sort: true}
+        ,{field:'quantity', title:'Purchase quantity'}
+        ,{field:'amount', title:'Amount', totalRow: true}
+        ,{fixed: 'right', title:'Cart Operation', toolbar: '#barDemo'}
+      ]]
+      ,page: true
+    });
+
+    //头工具栏事件
+    table.on('toolbar(test)', function(obj){
+      var checkStatus = table.checkStatus(obj.config.id);
+      switch(obj.event){
+        case 'checkBalance':
+          $.get('/Login/Info', {}, function (data) {
+            var icon=6;
+            if(data==="Tourist don't have privilege to check balance!\r\n")
+              icon=2;
+            layer.msg(data, {
+              icon: icon,
+              time: 2000
+            }, function(){
+              //do something
+            });
+          }).fail(function () {
+            // Uh oh, something went wrong
+          });
+          break;
+        case 'clearShoppingcart':
+          $.ajax({
+            url: '/Cart/delItem',
+            type: 'post',
+            data: {},
+            success:function(feedback){
+              table.reload('test'
+                      , {
+                        page: {
+                          curr: 1 //重新从第 1 页开始
+                        }
+                      });
+              layer.msg(feedback, {
+                icon: 1,
+                time: 1000 //1秒关闭（如果不配置，默认是3秒）
+              }, function(){
+                //do something
+              });
+            }
+          });
+          break;
+      };
+    });
+
+    //监听行工具事件
+    table.on('tool(test)', function(obj){
+      var data = obj.data;
+      //console.log(obj)
+      if(obj.event === 'del'){
+        layer.confirm('Ready to delete this item?', function(index){
+          $.ajax({
+            url:"/Cart/delItem",
+            type:"post",
+            data:{gid:data.gid},
+            success:function(feedback){
+              table.reload('test'
+                      , {
+                        page: {
+                          curr: 1 //重新从第 1 页开始
+                        }
+                      });
+              layer.close(index);
+              layer.msg(feedback, {
+                icon: 1,
+                time: 1000 //1秒关闭（如果不配置，默认是3秒）
+              }, function(){
+                //do something
+              });
+            },
+          });
+        });
+      } else if(obj.event === 'edit'){
+        layer.prompt({
+          formType: 0
+          ,value: data.quantity
+        }, function(value, index){
+          $.ajax({
+            url:"/Cart/updateItem",
+            type:"post",
+            data:{gid:data.gid,quantity:value},
+            success:function(feedback){
+              layer.close(index);
+              layer.msg(feedback, {
+                icon: 1,
+                time: 1000 //1秒关闭（如果不配置，默认是3秒）
+              }, function(){
+                //do something
+              });
+            },
+            error:function(xhr,textstatus,thrown){
+            }
+          });
+          table.reload('test'
+                  , {
+                    page: {
+                      curr: 1 //重新从第 1 页开始
+                    }
+                  });
+        });
+      }
+    });
+  });
+</script>
+
+<script>
+  var pay=function(){
+    var table = layui.table;
+    var checkStatus = table.checkStatus('test');
+    var data = checkStatus.data;
+    var sum=0;
+    var payList = [];
+    for(var i=0;i<data.length;i++){
+      sum+=data[i].amount;
+      payList.push(data[i].gid);
+    }
+    payList = JSON.stringify(payList);
+    layer.confirm("Ready to pay ￥"+sum+" for selected item(s)?", function(index){
+      $.ajax({
+        url:"/Pay",
+        type:"post",
+        data:{payList:payList,payAmount:sum},
+        success:function(feedback){
+          layer.close(index);
+          var icon=1;
+          if(feedback=="No items selected!\r\n")
+            icon=5;
+          else if(feedback=="It's invalid for tourist to pay!\r\n")
+            icon=2;
+          else if(feedback=="User doesn't exist!\r\n")
+            icon=2;
+          else if(feedback=="User doesn't have enough money!\r\n")
+            icon=5;
+          else if(feedback=="Purchase quantity exceeds inventory!\r\n")
+            icon=5;
+          layer.msg(feedback, {
+            icon: icon,
+            time: 1000 //1秒关闭（如果不配置，默认是3秒）
+          }, function(){
+            //do something
+          });
+          if(icon===1)
+            table.reload('test'
+                    , {
+                      page: {
+                        curr: 1 //重新从第 1 页开始
+                      }
+                    });
+        },
+      });
+
+    });
+  }
+</script>
+<script>
+  var leave=function(){
+    $.ajax({
+      url: '/Leave',
+      method: 'GET',
+      async: false
+    });
+  }
+</script>
+<script>
+  var home=function(){
+    $("body").removeAttr("onbeforeunload");
+    window.location.href='Home';
+  }
+</script>
+
+<div class="layui-row layui-col-space1">
+<div class="layui-col-md1">
+<a class="layui-btn layui-btn-lg layui-btn-normal" onclick="home()">&lt;==Go back to homepage</a>
+</div>
+<div class="layui-col-md2 layui-col-md-offset9">
+<a class="layui-btn layui-btn-lg layui-btn-normal" onclick="pay()">Pay for selected item(s)!</a>
+</div>
+</div>
+
+</body>
+</html>

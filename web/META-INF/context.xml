@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+    <Resource name="jdbc/shoppingDB" auth="Container" type="javax.sql.DataSource"
+              maxTotal="50" maxIdle="30" maxWaitMillis="10000" logAbandoned="true"
+              username="haco" password="haco" driverClassName="com.mysql.cj.jdbc.Driver"
+              url="jdbc:mysql://localhost:3306/shopping_db?characterEncoding=UTF8&amp;serverTimezone=Asia/Shanghai"/>
+</Context>
