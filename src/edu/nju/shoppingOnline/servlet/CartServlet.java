@@ -1,7 +1,8 @@
 package edu.nju.shoppingOnline.servlet;
 
-import edu.nju.shoppingOnline.businessObj.ShoppingCart;
+import edu.nju.shoppingOnline.service.ShoppingCart;
 
+import javax.naming.NamingException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -13,6 +14,7 @@ import java.util.ArrayList;
 
 @WebServlet("/Cart/*")
 public class CartServlet extends HttpServlet {
+
     public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
         HttpSession session=req.getSession();
         ShoppingCart cart=(ShoppingCart)session.getAttribute("cart");
@@ -21,8 +23,12 @@ public class CartServlet extends HttpServlet {
         out.println("\"code\": 0,");
         out.println("\"msg\": \"\",");
         if(cart==null){
-            session.setAttribute("cart",new ShoppingCart());
-            cart=(ShoppingCart)session.getAttribute("cart");
+            try {
+                session.setAttribute("cart", new ShoppingCart());
+                cart=(ShoppingCart)session.getAttribute("cart");
+            } catch (NamingException e) {
+                e.printStackTrace();
+            }
             out.println("\"count\": "+0+",");
             out.println("\"data\": [");
         }else{
@@ -55,8 +61,12 @@ public class CartServlet extends HttpServlet {
             HttpSession session=req.getSession();
             ShoppingCart cart=(ShoppingCart)session.getAttribute("cart");
             if(cart==null){
-                session.setAttribute("cart",new ShoppingCart());
-                cart=(ShoppingCart)session.getAttribute("cart");
+                try {
+                    session.setAttribute("cart", new ShoppingCart());
+                    cart=(ShoppingCart)session.getAttribute("cart");
+                } catch (NamingException e) {
+                    e.printStackTrace();
+                }
             }
             cart.addGoods(Integer.parseInt(req.getParameter("gid")),req.getParameter("name"),Double.parseDouble(req.getParameter("price")),Integer.parseInt(req.getParameter("quantity")));
             res.getWriter().println("Added to shopping cart successfully!");

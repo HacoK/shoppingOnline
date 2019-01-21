@@ -1,9 +1,9 @@
 package edu.nju.shoppingOnline.servlet;
 
-import edu.nju.shoppingOnline.domain.User;
-import edu.nju.shoppingOnline.repository.RepoFactory;
+import edu.nju.shoppingOnline.model.User;
 import edu.nju.shoppingOnline.repository.UserRepo;
 
+import javax.ejb.EJB;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -14,7 +14,8 @@ import java.io.IOException;
 
 @WebServlet("/Register")
 public class RegisterServlet extends HttpServlet {
-
+    @EJB
+    UserRepo userRepo;
     public void init(){
     }
 
@@ -31,7 +32,6 @@ public class RegisterServlet extends HttpServlet {
         user.setAccount(req.getParameter("account"));
         user.setPasswd(req.getParameter("password"));
         user.setEmail(req.getParameter("email"));
-        UserRepo userRepo= (UserRepo) RepoFactory.getFactory().getInstance("UserRepo");
         if(userRepo.addUser(user)){
             res.sendRedirect("Login");
         }else{

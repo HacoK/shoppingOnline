@@ -1,12 +1,9 @@
 package edu.nju.shoppingOnline.servlet;
 
-import edu.nju.shoppingOnline.domain.User;
-import edu.nju.shoppingOnline.repository.RepoFactory;
+import edu.nju.shoppingOnline.model.User;
 import edu.nju.shoppingOnline.repository.UserRepo;
 
-import javax.naming.Context;
-import javax.naming.InitialContext;
-import javax.naming.NamingException;
+import javax.ejb.EJB;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,10 +11,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import javax.sql.DataSource;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.*;
 
 
 /**
@@ -25,11 +20,11 @@ import java.sql.*;
  */
 @WebServlet(urlPatterns={"/Login/*","/Logout","/Leave","/Counter"})
 public class LoginServlet extends HttpServlet {
-
+    @EJB
+    UserRepo userRepo;
     public void init(){
     }
     public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException {
-        UserRepo userRepo=(UserRepo)RepoFactory.getFactory().getInstance("UserRepo");
         User user=userRepo.getUser(req.getParameter("account"));
         if(user!=null){
             String passwd=user.getPasswd();
@@ -63,7 +58,6 @@ public class LoginServlet extends HttpServlet {
                 return;
             }
             String account=(String)session.getAttribute("userID");
-            UserRepo userRepo=(UserRepo) RepoFactory.getFactory().getInstance("UserRepo");
             User user=userRepo.getUser(account);
             res.getWriter().println("Hello "+account+"!<br>");
             res.getWriter().println("Your balance is &yen;"+user.getBalance());

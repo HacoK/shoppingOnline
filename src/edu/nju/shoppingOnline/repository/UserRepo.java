@@ -1,92 +1,41 @@
 package edu.nju.shoppingOnline.repository;
 
-import edu.nju.shoppingOnline.domain.User;
+import edu.nju.shoppingOnline.model.User;
 
-import javax.naming.Context;
-import javax.naming.InitialContext;
-import javax.naming.NamingException;
-import javax.sql.DataSource;
-import java.sql.*;
+import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 
+@Stateless
 public class UserRepo {
-    Context ctx;
-    DataSource ds;
-    Connection con;
-    Statement stmt;
-    PreparedStatement pstmt;
-    ResultSet rs;
-    int opNum;
+    @PersistenceContext
+    private EntityManager em;
+
     public UserRepo(){
-        try {
-            ctx=new InitialContext();
-            ds= (DataSource) ctx.lookup("java:comp/env/jdbc/shoppingDB") ;
-        } catch (NamingException e) {
-            System.out.println("Initial Error: "+e);
-        }
     }
 
     public boolean addUser(User user){
-        try {
-            con= ds.getConnection();
-            pstmt = con.prepareStatement("INSERT INTO user (account,passwd,email,balance) VALUES(?,?,?,0)");
-            pstmt.setString(1,user.getAccount());
-            pstmt.setString(2,user.getPasswd());
-            pstmt.setString(3,user.getEmail());
-            opNum= pstmt.executeUpdate();
-            pstmt.close();
-            con.close();
-        } catch (SQLException e) {
-            System.out.println("Service[SQL] Error: "+e);
-        }
-        if(opNum==1){
-            return true;
-        }else{
-            return false;
-        }
+        Query query=em.createNativeQuery("INSERT INTO user (account,passwd,email,balance) VALUES(?1,?2,?3,0)");
+        query.setParameter(1,user.getAccount());
+        query.setParameter(2,user.getPasswd());
+        query.setParameter(3,user.getEmail());
+        query.executeUpdate();
+        return true;
     }
 
     public User getUser(String account){
-        User user=new User();
-        try {
-            con= ds.getConnection();
-            stmt = con.createStatement();
-            rs=stmt.executeQuery("SELECT * FROM user WHERE account = \'"+account+"\'");
-            if(rs.next()){
-                user.setAccount(account);
-                user.setBalance(rs.getDouble("balance"));
-                user.setEmail(rs.getString("email"));
-                user.setPasswd(rs.getString("passwd"));
-            }else{
-                user=null;
-            }
-            rs.close();
-            stmt.close();
-            con.close();
-        } catch (SQLException e) {
-            System.out.println("Service[SQL] Error: "+e);
-        }
+        User user=em.find(User.class, account);
         return user;
     }
 
     public boolean updateUser(User user){
-        try {
-            con= ds.getConnection();
-            pstmt = con.prepareStatement("UPDATE user SET balance = ?,email = ?,passwd = ? WHERE account = ? ");
-            pstmt.setDouble(1,user.getBalance());
-            pstmt.setString(2,user.getEmail());
-            pstmt.setString(3,user.getPasswd());
-            pstmt.setString(4,user.getAccount());
-            opNum= pstmt.executeUpdate();
-            rs.close();
-            stmt.close();
-            con.close();
-        } catch (SQLException e) {
-            System.out.println("Service[SQL] Error: "+e);
-        }
-        if(opNum==1){
-            return true;
-        }else{
-            return false;
-        }
+        Query query=em.createNativeQuery("UPDATE user SET balance = ?1,email = ?2,passwd = ?3 WHERE account = ?4 ");
+        query.setParameter(1,user.getBalance());
+        query.setParameter(2,user.getEmail());
+        query.setParameter(3,user.getPasswd());
+        query.setParameter(4,user.getAccount());
+        query.executeUpdate();
+        return true;
     }
 }

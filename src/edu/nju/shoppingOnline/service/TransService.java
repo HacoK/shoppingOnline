@@ -1,9 +1,10 @@
 package edu.nju.shoppingOnline.service;
 
-import edu.nju.shoppingOnline.domain.Goods;
-import edu.nju.shoppingOnline.domain.Order;
-import edu.nju.shoppingOnline.domain.User;
+import edu.nju.shoppingOnline.model.Goods;
+import edu.nju.shoppingOnline.model.Order;
+import edu.nju.shoppingOnline.model.User;
 
+import javax.ejb.Singleton;
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
@@ -11,6 +12,7 @@ import javax.sql.DataSource;
 import java.sql.*;
 import java.util.ArrayList;
 
+@Singleton
 public class TransService {
     Context ctx;
     DataSource ds;
@@ -23,7 +25,7 @@ public class TransService {
     public TransService(){
         try {
             ctx=new InitialContext();
-            ds= (DataSource) ctx.lookup("java:comp/env/jdbc/shoppingDB") ;
+            ds= (DataSource) ctx.lookup("java:jboss/datasources/shoppingDB") ;
         } catch (NamingException e) {
             System.out.println("Initial Error: "+e);
         }
@@ -35,7 +37,6 @@ public class TransService {
         Order order;
         try {
             con= ds.getConnection();
-            con.setAutoCommit(false);
             for(int i=0;i<gList.size();i++){
                 goods=gList.get(i);
                 pstmt = con.prepareStatement("UPDATE goods SET name = ?,type = ?,num = ?,price = ? WHERE gid = ? ");
@@ -70,24 +71,11 @@ public class TransService {
             pstmt.setString(4,user.getAccount());
             opNum= pstmt.executeUpdate();
 
-            con.commit();
-            con.setAutoCommit(true);
             rs.close();
             stmt.close();
             con.close();
 
         } catch (SQLException e) {
-            try {
-                con.rollback();
-                if(rs!=null)
-                    rs.close();
-                if(stmt!=null)
-                    stmt.close();
-                if(con!=null)
-                    con.close();
-            } catch (SQLException e1) {
-                e1.printStackTrace();
-            }
             e.printStackTrace();
         }
     }

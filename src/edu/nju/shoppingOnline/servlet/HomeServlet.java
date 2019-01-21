@@ -1,9 +1,9 @@
 package edu.nju.shoppingOnline.servlet;
 
-import edu.nju.shoppingOnline.domain.Goods;
+import edu.nju.shoppingOnline.model.Goods;
 import edu.nju.shoppingOnline.repository.GoodsRepo;
-import edu.nju.shoppingOnline.repository.RepoFactory;
 
+import javax.ejb.EJB;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -15,6 +15,8 @@ import java.util.ArrayList;
 
 @WebServlet("/Home")
 public class HomeServlet extends HttpServlet {
+    @EJB
+    GoodsRepo goodsRepo;
     public void init(){
     }
     public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
@@ -26,7 +28,6 @@ public class HomeServlet extends HttpServlet {
     }
     public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException {
         String type=req.getParameter("type");
-        GoodsRepo goodsRepo = (GoodsRepo)RepoFactory.getFactory().getInstance("GoodsRepo");
         Integer count=goodsRepo.countGoods(type);
         PrintWriter out = res.getWriter();
         out.println("{");
