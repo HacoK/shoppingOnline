@@ -5,26 +5,29 @@ import edu.nju.shoppingOnline.model.Order;
 import edu.nju.shoppingOnline.model.User;
 import edu.nju.shoppingOnline.repository.*;
 
-import javax.ejb.EJB;
-import javax.ejb.Remove;
-import javax.ejb.Stateful;
-import javax.naming.InitialContext;
-import javax.naming.NamingException;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Service;
+
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-@Stateful
+@Service
+@Scope("prototype")
 public class ShoppingCart {
     private Map nameMap=new HashMap<Integer,String>();
     private Map priceMap=new HashMap<Integer,Double>();
     private Map quantityMap=new HashMap<Integer,Integer>();
 
-
-    public ShoppingCart() throws NamingException {
-    }
-
+    @Autowired
+    UserRepo userRepo;
+    @Autowired
+    GoodsRepo goodsRepo;
+    @Autowired
+    TransService transService;
 
     public void addGoods(Integer gid,String name,Double price,Integer quantity){
         if(nameMap.containsKey(gid)){
@@ -37,7 +40,6 @@ public class ShoppingCart {
         }
     }
 
-    @Remove
     public void clear(){
         nameMap.clear();
         priceMap.clear();
@@ -58,8 +60,8 @@ public class ShoppingCart {
         }
     }
 
-    public String payItems(String account,ArrayList<Integer> list,Double amount) throws NamingException {
-        User user=((UserRepo)new InitialContext().lookup("java:global/webapp/UserRepo")).getUser(account);
+    public String payItems(String account,ArrayList<Integer> list,Double amount) {
+        User user=userRepo.getUser(account);
         Order order;
         Goods goods;
         ArrayList<Order> orders=new ArrayList<>();
@@ -69,7 +71,7 @@ public class ShoppingCart {
         if(user.getBalance()<amount)
             return "User doesn\'t have enough money!";
         for(Integer i:list){
-            goods=((GoodsRepo)new InitialContext().lookup("java:global/webapp/GoodsRepo")).getGoods(i);
+            goods=goodsRepo.getGoods(i);
             if(goods.getNum()<getQuantity(i))
                 return "Purchase quantity exceeds inventory!";
             goods.setNum(goods.getNum()-getQuantity(i));
@@ -85,13 +87,9 @@ public class ShoppingCart {
             orders.add(order);
         }
         user.setBalance(user.getBalance()-amount);
-        ((TransService)new InitialContext().lookup("java:global/webapp/TransService")).payBill(user,orders,gList);
-        if(list.size()==nameMap.size())
-            clear();
-        else{
-            for(Integer i:list){
-                removeItem(i);
-            }
+        transService.payBill(user,orders,gList);
+        for(Integer i:list){
+            removeItem(i);
         }
         return "Pay finished successfully!";
     }

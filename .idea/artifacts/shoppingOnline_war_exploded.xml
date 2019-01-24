@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="shoppingOnline:war exploded">
+    <output-path>D:/Tomcat9/webapps/shoppingOnline</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="shoppingOnline" />
+        </element>
+        <element id="directory" name="lib" />
+      </element>
+      <element id="javaee-facet-resources" facet="shoppingOnline/web/Web" />
+    </root>
+  </artifact>
+</component>

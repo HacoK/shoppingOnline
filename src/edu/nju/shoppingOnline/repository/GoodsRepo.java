@@ -1,63 +1,128 @@
 package edu.nju.shoppingOnline.repository;
 
 import edu.nju.shoppingOnline.model.Goods;
-import edu.nju.shoppingOnline.utli.HQLUtil;
-import org.hibernate.loader.custom.sql.SQLQueryParser;
+import org.springframework.stereotype.Repository;
 
-import javax.ejb.LocalBean;
-import javax.ejb.Stateless;
-import javax.persistence.*;
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+import javax.sql.DataSource;
+import java.sql.*;
 import java.util.ArrayList;
 
-@Stateless
-@LocalBean
+@Repository
 public class GoodsRepo {
-//    @PersistenceContext
-//    private EntityManager em;
-
+    Context ctx;
+    DataSource ds;
+    Connection con;
+    Statement stmt;
+    PreparedStatement pstmt;
+    ResultSet rs;
+    int opNum;
 
     public GoodsRepo(){
+        try {
+            ctx=new InitialContext();
+            ds= (DataSource) ctx.lookup("java:comp/env/jdbc/shoppingDB") ;
+        } catch (NamingException e) {
+            System.out.println("Initial Error: "+e);
+        }
     }
 
     public Goods getGoods(Integer gid){
-        Goods goods=HQLUtil.getSession().get(Goods.class, gid);
-        //Goods goods=em.find(Goods.class, gid);
+        Goods goods=new Goods();
+        try {
+            con= ds.getConnection();
+            stmt = con.createStatement();
+            rs=stmt.executeQuery("SELECT * FROM goods WHERE gid = "+gid);
+            if(rs.next()){
+                goods.setGid(gid);
+                goods.setName(rs.getString("name"));
+                goods.setType(rs.getString("type"));
+                goods.setNum(rs.getInt("num"));
+                goods.setPrice(rs.getDouble("price"));
+            }else{
+                goods=null;
+            }
+            rs.close();
+            stmt.close();
+            con.close();
+        } catch (SQLException e) {
+            System.out.println("Service[SQL] Error: "+e);
+        }
         return goods;
     }
 
     public ArrayList<Goods> listGoods(String type){
-        ArrayList<Goods> list;
-        if(type==null||type.equals("all")){
-//            Query query = em.createNativeQuery("SELECT * FROM goods",Goods.class);
-//            list = (ArrayList<Goods>) query.getResultList();
-//            em.clear();
-            list = (ArrayList<Goods>)HQLUtil.find("from Goods");
-        }else{
-//            Query query = em.createNativeQuery("SELECT * FROM goods WHERE type = \'"+type+"\'",Goods.class);
-//            list = (ArrayList<Goods>) query.getResultList();
-//            em.clear();
-            list = (ArrayList<Goods>)HQLUtil.find("from Goods where type = \'"+type+"\'");
+        ArrayList<Goods> list=new ArrayList<>();
+        try {
+            con= ds.getConnection();
+            stmt = con.createStatement();
+            if(type==null||type.equals("all")){
+                rs=stmt.executeQuery("SELECT * FROM goods");
+            }else{
+                rs=stmt.executeQuery("SELECT * FROM goods WHERE type = \'"+type+"\'");
+            }
+            while(rs.next()){
+                Goods goods=new Goods();
+                goods.setGid(rs.getInt("gid"));
+                goods.setName(rs.getString("name"));
+                goods.setType(rs.getString("type"));
+                goods.setPrice(rs.getDouble("price"));
+                goods.setNum(rs.getInt("num"));
+                list.add(goods);
+            }
+            rs.close();
+            stmt.close();
+            con.close();
+        } catch (SQLException e) {
+            System.out.println("Service[SQL] Error: "+e);
         }
         return list;
     }
 
     public Integer countGoods(String type){
         Integer count=0;
-        if(type==null||type.equals("all")){
-//            Query query =em.createNativeQuery("SELECT count(*) FROM goods");
-//            count = Integer.valueOf(query.getSingleResult().toString());
-            // 1、得到Query对象，并写入hql语句
-            org.hibernate.query.Query query = HQLUtil.getSession().createQuery("select count(*) from Goods");
-            //2、获取结果（结果为long类型）
-            count = Integer.valueOf(query.uniqueResult().toString());
-        }else{
-//            Query query =em.createNativeQuery("SELECT count(*) FROM goods WHERE type = \'"+type+"\'");
-//            count = Integer.valueOf(query.getSingleResult().toString());
-
-            org.hibernate.query.Query query = HQLUtil.getSession().createQuery("select count(*) from Goods where type = \'"+type+"\'");
-            count = Integer.valueOf(query.uniqueResult().toString());
+        try {
+            con= ds.getConnection();
+            stmt = con.createStatement();
+            if(type==null||type.equals("all")){
+                rs=stmt.executeQuery("SELECT count(*) FROM goods");
+            }else{
+                rs=stmt.executeQuery("SELECT count(*) FROM goods WHERE type = \'"+type+"\'");
+            }
+            if(rs.next()){
+                count=rs.getInt(1);
+            }
+            rs.close();
+            stmt.close();
+            con.close();
+        } catch (SQLException e) {
+            System.out.println("Service[SQL] Error: "+e);
         }
         return count;
     }
 
+    public boolean updateGoods(Goods goods){
+        try {
+            con= ds.getConnection();
+            pstmt = con.prepareStatement("UPDATE goods SET name = ?,type = ?,num = ?,price = ? WHERE gid = ? ");
+            pstmt.setString(1,goods.getName());
+            pstmt.setString(2,goods.getType());
+            pstmt.setInt(3,goods.getNum());
+            pstmt.setDouble(4,goods.getPrice());
+            pstmt.setInt(5,goods.getGid());
+            opNum= pstmt.executeUpdate();
+            rs.close();
+            stmt.close();
+            con.close();
+        } catch (SQLException e) {
+            System.out.println("Service[SQL] Error: "+e);
+        }
+        if(opNum==1){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }

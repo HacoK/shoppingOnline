@@ -2,8 +2,12 @@ package edu.nju.shoppingOnline.servlet;
 
 import edu.nju.shoppingOnline.model.Goods;
 import edu.nju.shoppingOnline.repository.GoodsRepo;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 
-import javax.ejb.EJB;
+import javax.annotation.PostConstruct;
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -13,11 +17,13 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 
+@Component
 @WebServlet("/Home")
 public class HomeServlet extends HttpServlet {
-    @EJB
+    @Autowired
     GoodsRepo goodsRepo;
-    public void init(){
+    public void init(ServletConfig config){
+        SpringBeanAutowiringSupport.processInjectionBasedOnServletContext(this, config.getServletContext());
     }
     public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
         try {
@@ -26,6 +32,7 @@ public class HomeServlet extends HttpServlet {
             e.printStackTrace();
         }
     }
+
     public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException {
         String type=req.getParameter("type");
         Integer count=goodsRepo.countGoods(type);

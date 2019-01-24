@@ -1,8 +1,12 @@
 package edu.nju.shoppingOnline.servlet;
 
+import edu.nju.shoppingOnline.SpringContext;
 import edu.nju.shoppingOnline.service.ShoppingCart;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 
-import javax.naming.NamingException;
+import javax.servlet.ServletConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -11,6 +15,7 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+
 
 @WebServlet("/Cart/*")
 public class CartServlet extends HttpServlet {
@@ -23,12 +28,8 @@ public class CartServlet extends HttpServlet {
         out.println("\"code\": 0,");
         out.println("\"msg\": \"\",");
         if(cart==null){
-            try {
-                session.setAttribute("cart", new ShoppingCart());
-                cart=(ShoppingCart)session.getAttribute("cart");
-            } catch (NamingException e) {
-                e.printStackTrace();
-            }
+            session.setAttribute("cart",SpringContext.getContext().getBean("shoppingCart"));
+            cart=(ShoppingCart)session.getAttribute("cart");
             out.println("\"count\": "+0+",");
             out.println("\"data\": [");
         }else{
@@ -61,12 +62,8 @@ public class CartServlet extends HttpServlet {
             HttpSession session=req.getSession();
             ShoppingCart cart=(ShoppingCart)session.getAttribute("cart");
             if(cart==null){
-                try {
-                    session.setAttribute("cart", new ShoppingCart());
-                    cart=(ShoppingCart)session.getAttribute("cart");
-                } catch (NamingException e) {
-                    e.printStackTrace();
-                }
+                session.setAttribute("cart",SpringContext.getContext().getBean("shoppingCart"));
+                cart=(ShoppingCart)session.getAttribute("cart");
             }
             cart.addGoods(Integer.parseInt(req.getParameter("gid")),req.getParameter("name"),Double.parseDouble(req.getParameter("price")),Integer.parseInt(req.getParameter("quantity")));
             res.getWriter().println("Added to shopping cart successfully!");

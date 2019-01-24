@@ -1,16 +1,11 @@
 package edu.nju.shoppingOnline.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-
-@Entity
 public class User {
     private String account;
     private String passwd;
     private String email;
     private Double balance;
 
-    @Id
     public String getAccount() {
         return account;
     }

@@ -1,34 +1,57 @@
 package edu.nju.shoppingOnline.repository;
 
 import edu.nju.shoppingOnline.model.Order;
+import org.springframework.stereotype.Repository;
 
-import javax.ejb.LocalBean;
-import javax.ejb.Stateless;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import javax.persistence.Query;
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+import javax.sql.DataSource;
 import java.sql.*;
 
-@Stateless
-@LocalBean
+@Repository
 public class OrderRepo {
-//    @PersistenceContext
-//    private EntityManager em;
+    Context ctx;
+    DataSource ds;
+    Connection con;
+    Statement stmt;
+    PreparedStatement pstmt;
+    ResultSet rs;
+    int opNum;
 
     public OrderRepo(){
+        try {
+            ctx=new InitialContext();
+            ds= (DataSource) ctx.lookup("java:comp/env/jdbc/shoppingDB") ;
+        } catch (NamingException e) {
+            System.out.println("Initial Error: "+e);
+        }
     }
 
     public boolean addOrder(Order order){
-//        Integer oid=0;
-//        Query query=em.createNativeQuery("SELECT count(*) FROM `order`");
-//        oid=Integer.valueOf(query.getSingleResult().toString())+1;
-//        query=em.createNativeQuery("INSERT INTO `order` (oid,account,gid,quantity,amount,date) VALUES(?1,?2,?3,?4,?5,?6)");
-//        query.setParameter(1,oid);
-//        query.setParameter(2,order.getAccount());
-//        query.setParameter(3,order.getGid());
-//        query.setParameter(4,order.getQuantity());
-//        query.setParameter(5,order.getAmount());
-//        query.setParameter(6,Date.valueOf(order.getDate()));
-        return true;
+        try {
+            con= ds.getConnection();
+            pstmt = con.prepareStatement("INSERT INTO `order` (oid,account,gid,quantity,amount,date) VALUES(?,?,?,?,?,?)");
+            stmt = con.createStatement();
+            rs=stmt.executeQuery("SELECT count(*) FROM `order`");
+            rs.next();
+            pstmt.setInt(1,rs.getInt(1)+1);
+            pstmt.setString(2,order.getAccount());
+            pstmt.setInt(3,order.getGid());
+            pstmt.setInt(4,order.getQuantity());
+            pstmt.setDouble(5,order.getAmount());
+            pstmt.setDate(6,Date.valueOf(order.getDate()));
+            opNum= pstmt.executeUpdate();
+            rs.close();
+            stmt.close();
+            con.close();
+        } catch (SQLException e) {
+            System.out.println("Service[SQL] Error: "+e);
+        }
+        if(opNum==1){
+            return true;
+        }else{
+            return false;
+        }
     }
 }

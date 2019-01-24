@@ -2,24 +2,11 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="webapp:war exploded" />
+      <artifact name="shoppingOnline:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="74a165f8-92a8-42a2-a350-d70f83bd0aaa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/META-INF/context.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/edu/nju/shoppingOnline/repository/GoodsRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/edu/nju/shoppingOnline/repository/GoodsRepo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/edu/nju/shoppingOnline/repository/OrderRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/edu/nju/shoppingOnline/repository/OrderRepo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/edu/nju/shoppingOnline/repository/UserRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/edu/nju/shoppingOnline/repository/UserRepo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/edu/nju/shoppingOnline/service/ShoppingCart.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/edu/nju/shoppingOnline/service/ShoppingCart.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/edu/nju/shoppingOnline/service/TransService.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/edu/nju/shoppingOnline/service/TransService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/edu/nju/shoppingOnline/servlet/CartServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/edu/nju/shoppingOnline/servlet/CartServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/edu/nju/shoppingOnline/servlet/HomeServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/edu/nju/shoppingOnline/servlet/HomeServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/edu/nju/shoppingOnline/servlet/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/edu/nju/shoppingOnline/servlet/LoginServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/edu/nju/shoppingOnline/servlet/RegisterServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/edu/nju/shoppingOnline/servlet/RegisterServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/webapp.iml" afterDir="false" />
-    </list>
+    <list default="true" id="54ae059a-4a89-4301-a922-f9916c1d1817" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,29 +14,45 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/webapp$JBoss_8.ic" NAME="JBoss 8 Coverage Results" MODIFIED="1547368917314" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/webapp$Tomcat_9_0_13.ic" NAME="Tomcat 9.0.13 Coverage Results" MODIFIED="1544968707081" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-  </component>
-  <component name="CoverageViewManager">
-    <option name="myElementSize" value="203" />
-  </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_DATA_SOURCES" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <option name="HIDDEN_KINDS">
-      <set />
-    </option>
-    <expand />
-    <select />
-  </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="21" column="26" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/edu/nju/shoppingOnline/servlet/CartServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="900">
+              <caret line="64" column="44" selection-start-line="64" selection-start-column="44" selection-end-line="64" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/edu/nju/shoppingOnline/service/ShoppingCart.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/edu/nju/shoppingOnline/repository/UserRepo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -59,67 +62,29 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="PREVIOUS_COMMIT_AUTHORS">
-      <list>
-        <option value="Haco &lt;877728156@qq.com&gt;" />
-      </list>
-    </option>
+    <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/edu/nju/shoppingOnline/servlets/FilterServlet.java" />
-        <option value="$PROJECT_DIR$/src/edu/nju/shoppingOnline/beans/shoppingCart.java" />
-        <option value="$PROJECT_DIR$/src/edu/nju/shoppingOnline/entity/shoppingCart.java" />
-        <option value="$PROJECT_DIR$/src/edu/nju/shoppingOnline/entity/Goods.java" />
-        <option value="$PROJECT_DIR$/src/edu/nju/shoppingOnline/servlets/ShoppingServlet.java" />
-        <option value="$PROJECT_DIR$/src/edu/nju/shoppingOnline/servlets/HomeServlet.java" />
-        <option value="$PROJECT_DIR$/src/edu/nju/shoppingOnline/servlets/CartItemServlet.java" />
-        <option value="$PROJECT_DIR$/src/edu/nju/shoppingOnline/servlets/CartServlet.java" />
-        <option value="$PROJECT_DIR$/src/edu/nju/shoppingOnline/domain/User.java" />
-        <option value="$PROJECT_DIR$/src/edu/nju/shoppingOnline/domain/goods.java" />
-        <option value="$PROJECT_DIR$/src/edu/nju/shoppingOnline/domain/Order.java" />
-        <option value="$PROJECT_DIR$/src/edu/nju/shoppingOnline/servlets/RegisterServlet.java" />
-        <option value="$PROJECT_DIR$/web/META-INF/context.xml" />
-        <option value="$PROJECT_DIR$/src/edu/nju/shoppingOnline/repository/DataFactory.java" />
-        <option value="$PROJECT_DIR$/src/edu/nju/shoppingOnline/repository/TransRepo.java" />
-        <option value="$PROJECT_DIR$/src/edu/nju/shoppingOnline/servlets/PayServlet.java" />
-        <option value="$PROJECT_DIR$/src/edu/nju/shoppingOnline/entity/ShoppingCart.java" />
-        <option value="$PROJECT_DIR$/src/edu/nju/shoppingOnline/filters/EncodeFilter.java" />
-        <option value="$PROJECT_DIR$/src/edu/nju/shoppingOnline/listeners/CounterListener.java" />
-        <option value="$PROJECT_DIR$/src/edu/nju/shoppingOnline/filters/LoginFilter.java" />
-        <option value="$PROJECT_DIR$/src/edu/nju/shoppingOnline/servlets/LoginServlet.java" />
-        <option value="$PROJECT_DIR$/web/index.html" />
-        <option value="$PROJECT_DIR$/web/register.html" />
-        <option value="$PROJECT_DIR$/web/homepage.html" />
-        <option value="$PROJECT_DIR$/web/shoppingcart.html" />
-        <option value="$PROJECT_DIR$/src/edu/nju/shoppingOnline/businessObject/ShoppingCart.java" />
-        <option value="$PROJECT_DIR$/src/edu/nju/shoppingOnline/filter/LoginFilter.java" />
-        <option value="$PROJECT_DIR$/src/edu/nju/shoppingOnline/businessObj/ShoppingCart.java" />
-        <option value="$PROJECT_DIR$/src/edu/nju/shoppingOnline/repository/RepoFactory.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/jboss-web.xml" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/META-INF/persistence.xml" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/persistence.xml" />
-        <option value="$PROJECT_DIR$/src/edu/nju/shoppingOnline/servlet/PayServlet.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/classes/META-INF/hibernate.cfg.xml" />
-        <option value="$PROJECT_DIR$/src/edu/nju/shoppingOnline/utli/HQLUtil.java" />
-        <option value="$PROJECT_DIR$/src/edu/nju/shoppingOnline/model/Goods.java" />
-        <option value="$PROJECT_DIR$/src/edu/nju/shoppingOnline/model/User.java" />
-        <option value="$PROJECT_DIR$/src/edu/nju/shoppingOnline/model/Order.java" />
-        <option value="$PROJECT_DIR$/src/edu/nju/shoppingOnline/Main.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/META-INF/context.xml" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/applicationContext.xml" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/edu/nju/shoppingOnline/repository/GoodsRepo.java" />
         <option value="$PROJECT_DIR$/src/edu/nju/shoppingOnline/repository/OrderRepo.java" />
         <option value="$PROJECT_DIR$/src/edu/nju/shoppingOnline/repository/UserRepo.java" />
-        <option value="$PROJECT_DIR$/src/edu/nju/shoppingOnline/service/ShoppingCart.java" />
         <option value="$PROJECT_DIR$/src/edu/nju/shoppingOnline/service/TransService.java" />
-        <option value="$PROJECT_DIR$/src/edu/nju/shoppingOnline/servlet/CartServlet.java" />
-        <option value="$PROJECT_DIR$/src/edu/nju/shoppingOnline/servlet/HomeServlet.java" />
-        <option value="$PROJECT_DIR$/src/edu/nju/shoppingOnline/servlet/LoginServlet.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/applicationContext.xml" />
+        <option value="$PROJECT_DIR$/src/edu/nju/shoppingOnline/servlet/TouristServlet.java" />
+        <option value="$PROJECT_DIR$/src/edu/nju/shoppingOnline/ContextLoaderListener.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/edu/nju/shoppingOnline/servlet/RegisterServlet.java" />
+        <option value="$PROJECT_DIR$/src/edu/nju/shoppingOnline/servlet/PayServlet.java" />
+        <option value="$PROJECT_DIR$/src/edu/nju/shoppingOnline/servlet/LoginServlet.java" />
+        <option value="$PROJECT_DIR$/src/edu/nju/shoppingOnline/servlet/HomeServlet.java" />
+        <option value="$PROJECT_DIR$/src/edu/nju/shoppingOnline/SpringContext.java" />
+        <option value="$PROJECT_DIR$/src/applicationContext.xml" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/classes/applicationContext.xml" />
+        <option value="$PROJECT_DIR$/src/edu/nju/shoppingOnline/servlet/CartServlet.java" />
+        <option value="$PROJECT_DIR$/src/edu/nju/shoppingOnline/service/ShoppingCart.java" />
       </list>
     </option>
   </component>
@@ -130,7 +95,7 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="65" />
     <option name="y" value="20" />
     <option name="width" value="1750" />
@@ -141,78 +106,60 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="webapp" type="58d84e3e:PackageViewProjectNode" />
-              <item name="webapp" type="616d4139:PackageViewModuleNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="webapp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="shoppingOnline" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shoppingOnline" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="webapp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="shoppingOnline" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shoppingOnline" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="webapp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="shoppingOnline" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shoppingOnline" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="shoppingOnline" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="webapp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="shoppingOnline" type="b2602c69:ProjectViewProjectNode" />
               <item name="shoppingOnline" type="462c0819:PsiDirectoryNode" />
-              <item name="listener" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="webapp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="shoppingOnline" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="webapp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="shoppingOnline" type="462c0819:PsiDirectoryNode" />
-              <item name="repository" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="webapp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="shoppingOnline" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="webapp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="shoppingOnline" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shoppingOnline" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="shoppingOnline" type="462c0819:PsiDirectoryNode" />
               <item name="servlet" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="webapp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="shoppingOnline" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shoppingOnline" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="webapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shoppingOnline" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shoppingOnline" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="shoppingOnline" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shoppingOnline" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="shoppingOnline" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
@@ -224,28 +171,24 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548326692618" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Tomcat9/webapps/webapp" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548348607545" />
+    <property name="last_opened_file_path" value="D:/Tomcat9/webapps/shoppingOnline" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="preferences.applicationServers" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\webapp\web\WEB-INF\lib" />
-      <recent name="D:\webapp\web\WEB-INF" />
-      <recent name="D:\webapp\web" />
-      <recent name="D:\webapp\web\img" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\webapp\src" />
-      <recent name="D:\webapp\src\edu\nju\shoppingOnline" />
-      <recent name="D:\webapp\web\WEB-INF\classes" />
-      <recent name="D:\webapp\web\WEB-INF\META-INF" />
-      <recent name="D:\webapp\web\WEB-INF" />
+      <recent name="D:\迅雷下载\history\shoppingOnline\web\WEB-INF\classes" />
+      <recent name="D:\迅雷下载\history\shoppingOnline\web\WEB-INF" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\迅雷下载\history\shoppingOnline\web\WEB-INF\classes" />
+      <recent name="D:\迅雷下载\history\shoppingOnline\web\WEB-INF\lib" />
+      <recent name="D:\迅雷下载\history\shoppingOnline\web\WEB-INF" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -260,173 +203,18 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JBoss Server.JBoss 8">
-    <configuration name="JBoss 8" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss 15.0.1.Final" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/" />
+  <component name="RunManager">
+    <configuration name="Tomcat 9.0.131" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.131" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="webapp:war exploded">
-          <settings />
-        </artifact>
-      </deployment>
-      <server-settings>
-        <option name="SERVER" />
-        <option name="BINDING_SET_NAME" value="" />
-        <option name="DOMAIN" value="false" />
-        <option name="SERVER_GROUP" value="main-server-group" />
-        <option name="USERNAME" value="" />
-        <option name="PASSWORD" value="" />
-      </server-settings>
-      <predefined_log_file enabled="true" id="JBoss" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="9051" />
-      </RunnerSettings>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="false" />
-          <option name="SCRIPT" value="$PROJECT_DIR$/../wildfly-15.0.1.Final/bin/jboss-cli.bat" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="BuildArtifacts" enabled="true">
-          <artifact name="webapp:war exploded" />
-        </option>
-      </method>
-    </configuration>
-    <configuration default="true" type="JBossConfiguration" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
-      <deployment />
-      <server-settings>
-        <option name="SERVER" value="" />
-        <option name="BINDING_SET_NAME" value="" />
-        <option name="DOMAIN" value="false" />
-        <option name="SERVER_GROUP" value="" />
-        <option name="USERNAME" value="" />
-        <option name="PASSWORD" value="" />
-      </server-settings>
-      <predefined_log_file enabled="true" id="JBoss" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="3403" />
-      </RunnerSettings>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JBossConfiguration" factoryName="Remote" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="LOCAL" value="false" />
-      <deployment />
-      <server-settings>
-        <data>
-          <option name="serverGroup" value="" />
-          <option name="transportHostId" />
-          <server-group />
-        </data>
-      </server-settings>
-      <predefined_log_file enabled="true" id="JBoss" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="3404" />
-        <option name="LOCAL" value="false" />
-      </RunnerSettings>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Tomcat 9.0.13" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.13" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/" />
-      <option name="UPDATING_POLICY" value="restart-server" />
-      <deployment>
-        <artifact name="webapp:war exploded">
+        <artifact name="shoppingOnline:war exploded">
           <settings>
             <option name="CONTEXT_PATH" value="/" />
           </settings>
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="Tomcat_9_0_13_webapp" />
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_shoppingOnline" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -434,7 +222,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="4941" />
+        <option name="DEBUG_PORT" value="3206" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -484,209 +272,47 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="webapp:war exploded" />
+          <artifact name="shoppingOnline:war exploded" />
         </option>
       </method>
     </configuration>
-    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
-      <deployment />
-      <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="_webapp" />
-      </server-settings>
-      <predefined_log_file enabled="true" id="Tomcat" />
-      <predefined_log_file enabled="true" id="Tomcat Catalina" />
-      <predefined_log_file id="Tomcat Manager" />
-      <predefined_log_file id="Tomcat Host Manager" />
-      <predefined_log_file id="Tomcat Localhost Access" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="3406" />
-      </RunnerSettings>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Remote" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="LOCAL" value="false" />
-      <deployment />
-      <server-settings>
-        <data>
-          <option name="targets">
-            <list>
-              <WatchedTargetModelImpl>
-                <option name="name" value="CONTEXT_XML" />
-                <name>CONTEXT_XML</name>
-              </WatchedTargetModelImpl>
-              <StagingTargetModelImpl>
-                <option name="name" value="STAGING" />
-                <name>STAGING</name>
-              </StagingTargetModelImpl>
-            </list>
-          </option>
-          <option name="transportHostId" />
-        </data>
-      </server-settings>
-      <predefined_log_file enabled="true" id="Tomcat" />
-      <predefined_log_file enabled="true" id="TOMCAT_LOCALHOST_LOG_ID" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="3408" />
-        <option name="LOCAL" value="false" />
-      </RunnerSettings>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="JBoss Server.JBoss 8" />
-      <item itemvalue="Tomcat Server.Tomcat 9.0.13" />
-    </list>
+  </component>
+  <component name="SpringConfigurationTabSettings">
+    <option name="sortAlpha" value="true" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="74a165f8-92a8-42a2-a350-d70f83bd0aaa" name="Default Changelist" comment="" />
-      <created>1544671507390</created>
+      <changelist id="54ae059a-4a89-4301-a922-f9916c1d1817" name="Default Changelist" comment="" />
+      <created>1548328080339</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1544671507390</updated>
-      <workItem from="1544671515884" duration="1328000" />
-      <workItem from="1544690236649" duration="2649000" />
-      <workItem from="1544693002328" duration="358000" />
-      <workItem from="1544795384093" duration="4319000" />
-      <workItem from="1544859111145" duration="678000" />
-      <workItem from="1544875133624" duration="1455000" />
-      <workItem from="1544954564292" duration="4111000" />
-      <workItem from="1545005608214" duration="3491000" />
-      <workItem from="1545274124847" duration="3667000" />
-      <workItem from="1545292342852" duration="1796000" />
-      <workItem from="1545354055877" duration="439000" />
-      <workItem from="1545371872810" duration="91000" />
-      <workItem from="1545372123827" duration="2128000" />
-      <workItem from="1545471055773" duration="15615000" />
-      <workItem from="1545529684835" duration="15434000" />
-      <workItem from="1545556299675" duration="8453000" />
-      <workItem from="1545577717374" duration="6053000" />
-      <workItem from="1545583804722" duration="1161000" />
-      <workItem from="1545609907710" duration="10954000" />
-      <workItem from="1545621929452" duration="261000" />
-      <workItem from="1545626799989" duration="18995000" />
-      <workItem from="1545702299357" duration="11269000" />
-      <workItem from="1545716537648" duration="232000" />
-      <workItem from="1545717354896" duration="8174000" />
-      <workItem from="1545725793905" duration="8763000" />
-      <workItem from="1545804889030" duration="3199000" />
-      <workItem from="1545809929405" duration="256000" />
-      <workItem from="1546696422151" duration="328000" />
-      <workItem from="1546696793463" duration="791000" />
-      <workItem from="1546707215250" duration="610000" />
-      <workItem from="1546709142974" duration="310000" />
-      <workItem from="1546710587272" duration="676000" />
-      <workItem from="1546764088466" duration="3708000" />
-      <workItem from="1546768029296" duration="16000" />
-      <workItem from="1546768070238" duration="18000" />
-      <workItem from="1547048898893" duration="270000" />
-      <workItem from="1547192663875" duration="378000" />
-      <workItem from="1547204746594" duration="622000" />
-      <workItem from="1547357651074" duration="32000" />
-      <workItem from="1547357847685" duration="713000" />
-      <workItem from="1547366606184" duration="2361000" />
-      <workItem from="1547369269855" duration="1676000" />
-      <workItem from="1547371315679" duration="93000" />
-      <workItem from="1547371521880" duration="148000" />
-      <workItem from="1547371834562" duration="1000" />
-      <workItem from="1547431087881" duration="102000" />
-      <workItem from="1547434535585" duration="1482000" />
-      <workItem from="1547436849744" duration="412000" />
-      <workItem from="1547440109105" duration="302000" />
-      <workItem from="1547460692174" duration="1877000" />
-      <workItem from="1547462646596" duration="7084000" />
-      <workItem from="1547479643730" duration="3845000" />
-      <workItem from="1547557947692" duration="596000" />
-      <workItem from="1547772322278" duration="49000" />
-      <workItem from="1547772516527" duration="172000" />
-      <workItem from="1547885111005" duration="6000" />
-      <workItem from="1547890198702" duration="98000" />
-      <workItem from="1547903638641" duration="596000" />
-      <workItem from="1547971611171" duration="13128000" />
-      <workItem from="1548049512028" duration="3441000" />
-      <workItem from="1548058761481" duration="5850000" />
-      <workItem from="1548089682495" duration="519000" />
-      <workItem from="1548224279846" duration="282000" />
-      <workItem from="1548224728302" duration="9000" />
-      <workItem from="1548321726019" duration="5099000" />
+      <updated>1548328080339</updated>
+      <workItem from="1548328083906" duration="4550000" />
+      <workItem from="1548338230883" duration="10330000" />
+      <workItem from="1548348983598" duration="243000" />
     </task>
-    <task id="LOCAL-00001" summary="Update">
-      <created>1548058878847</created>
+    <task id="LOCAL-00001" summary="Spring">
+      <created>1548349044921</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1548058878847</updated>
+      <updated>1548349044936</updated>
     </task>
-    <task id="LOCAL-00002" summary="Update">
-      <created>1548058970145</created>
+    <task id="LOCAL-00002" summary="Spring">
+      <created>1548349056677</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1548058970145</updated>
+      <updated>1548349056677</updated>
     </task>
-    <task id="LOCAL-00003" summary="Update">
-      <created>1548090197988</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1548090197988</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="193029000" />
+    <option name="totallyTimeSpent" value="15123000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -698,9 +324,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21715818" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25670242" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -708,242 +335,105 @@
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Web" order="7" side_tool="true" />
-      <window_info id="Persistence" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Spring" order="0" />
-      <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.3281471" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.4966488" weight="0.28895184" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="7" weight="0.3286119" />
-      <window_info anchor="bottom" id="Application Servers" order="8" weight="0.3286119" />
-      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5033512" side_tool="true" weight="0.28895184" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32719547" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.3286119" />
-      <window_info anchor="bottom" id="Java Enterprise" order="13" />
-      <window_info anchor="bottom" id="Database Changes" order="14" weight="0.3286119" />
-      <window_info anchor="bottom" id="Version Control" order="15" weight="0.3286119" />
-      <window_info anchor="bottom" id="Duplicate detector" order="16" weight="0.32956153" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" weight="0.3297587" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.32908848" />
-    </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20643431" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="Web" order="7" side_tool="true" />
-      <window_info id="Persistence" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3281471" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4966488" visible="true" weight="0.28895184" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3286119" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32868218" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.3286119" />
-      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5033512" side_tool="true" weight="0.28895184" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3281471" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.3286119" />
-      <window_info anchor="bottom" id="Java Enterprise" order="12" />
-      <window_info anchor="bottom" id="Database Changes" order="13" />
-      <window_info anchor="bottom" id="Version Control" order="14" weight="0.3286119" />
-      <window_info anchor="bottom" id="Duplicate detector" order="15" weight="0.32956153" />
+      <window_info anchor="bottom" id="Spring" order="8" weight="0.3286119" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3286119" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.3286119" />
+      <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.3286119" />
+      <window_info anchor="bottom" id="Database Changes" order="14" />
+      <window_info anchor="bottom" id="Version Control" order="15" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Maven" order="3" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" weight="0.3297587" />
+      <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.32908848" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2533512" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.3286119" />
+      <window_info anchor="bottom" id="Spring" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.3286119" />
+      <window_info anchor="bottom" id="Java Enterprise" order="13" />
+      <window_info anchor="bottom" id="Database Changes" order="14" />
+      <window_info anchor="bottom" id="Version Control" order="15" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update" />
+    <MESSAGE value="Spring" />
+    <option name="LAST_COMMIT_MESSAGE" value="Spring" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/html/myfirstpage.html" />
-    <entry file="file://$PROJECT_DIR$/web/index.jsp" />
-    <entry file="file://$PROJECT_DIR$/web/html/style.css" />
-    <entry file="file://$PROJECT_DIR$/src/edu/nju/helloworld/servlets/ShoppingServlet.java" />
-    <entry file="file://$PROJECT_DIR$/web/js/my-login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#242#248#0" expanded="true" />
-            <element signature="e#248#254#0" expanded="true" />
-            <element signature="e#254#260#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../Tomcat9/lib/servlet-api.jar!/javax/servlet/http/HttpServletRequest.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/img/favicon.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/reset.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/forgot.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-204" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/nju/shoppingOnline/servlets/FilterServlet.java" />
-    <entry file="file://$PROJECT_DIR$/src/edu/nju/shoppingOnline/beans.java" />
-    <entry file="file://$PROJECT_DIR$/src/edu/nju/shoppingOnline/entity/Goods.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/javax/sql/DataSource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="76" column="17" selection-start-line="76" selection-start-column="17" selection-end-line="76" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/nju/shoppingOnline/servlets/CartItemServlet.java" />
-    <entry file="jar://$PROJECT_DIR$/web/WEB-INF/lib/mysql-connector-java-8.0.13.jar!/com/mysql/cj/jdbc/exceptions/SQLError.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="72" selection-start-line="72" selection-end-line="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="51" lean-forward="true" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/homepage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="53" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/shoppingcart.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="26" lean-forward="true" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/META-INF/context.xml" />
     <entry file="file://$PROJECT_DIR$/src/edu/nju/shoppingOnline/repository/RepoFactory.java" />
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jboss-web.xml">
+    <entry file="file://$PROJECT_DIR$/src/edu/nju/shoppingOnline/repository/OrderRepo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.javaee.oss.jboss.editor.JBossWebRootProvider" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/nju/shoppingOnline/filter/EncodeFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="61" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="72">
+          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/nju/shoppingOnline/listener/CounterListener.java">
+    <entry file="file://$PROJECT_DIR$/src/edu/nju/shoppingOnline/repository/GoodsRepo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="55" selection-start-line="15" selection-start-column="8" selection-end-line="17" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="72">
+          <caret line="12" selection-start-line="12" selection-end-line="12" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/classes/META-INF/persistence.xml" />
-    <entry file="file://$PROJECT_DIR$/src/edu/nju/shoppingOnline/utli/HQLUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#626#627#0" expanded="true" />
-            <element signature="e#688#689#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/nju/shoppingOnline/model/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/nju/shoppingOnline/model/Order.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="3" selection-start-line="3" selection-end-line="4" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/nju/shoppingOnline/model/Goods.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/dispatcher-servlet.xml" />
+    <entry file="jar://$PROJECT_DIR$/web/WEB-INF/lib/spring-beans-5.1.4.RELEASE-sources.jar!/org/springframework/beans/factory/xml/XmlBeanDefinitionReader.java" />
     <entry file="file://$PROJECT_DIR$/src/edu/nju/shoppingOnline/servlet/TouristServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+        <state relative-caret-position="72">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/nju/shoppingOnline/ContextLoaderListener.java" />
+    <entry file="file://$PROJECT_DIR$/src/edu/nju/shoppingOnline/servlet/RegisterServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -952,113 +442,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/nju/shoppingOnline/servlet/PayServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="45" column="32" selection-start-line="45" selection-start-column="32" selection-end-line="45" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="-26">
+          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/lang/Thread.java">
+    <entry file="file://$PROJECT_DIR$/src/edu/nju/shoppingOnline/servlet/LoginServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="747" selection-start-line="747" selection-end-line="747" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/nju/shoppingOnline/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="66" selection-start-line="6" selection-start-column="66" selection-end-line="6" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/classes/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/nju/shoppingOnline/filter/LoginFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/classes/hibernate.cfg.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="13" column="145" lean-forward="true" selection-start-line="13" selection-start-column="112" selection-end-line="13" selection-end-column="145" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/META-INF/context.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="114" selection-start-line="5" selection-start-column="114" selection-end-line="5" selection-end-column="114" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/dispatcher-servlet.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="8" lean-forward="true" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="23" lean-forward="true" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/nju/shoppingOnline/repository/GoodsRepo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="12" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/nju/shoppingOnline/repository/OrderRepo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="11" selection-start-line="11" selection-end-line="12" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/nju/shoppingOnline/repository/UserRepo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="10" selection-start-line="10" selection-end-line="10" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/nju/shoppingOnline/service/ShoppingCart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="17" selection-start-line="17" selection-end-line="17" selection-end-column="9" />
+        <state relative-caret-position="195">
+          <caret line="29" column="42" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1067,51 +459,70 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/nju/shoppingOnline/service/TransService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="14" selection-start-line="14" selection-end-line="14" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/nju/shoppingOnline/servlet/CartServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="72">
+          <caret line="14" selection-start-line="14" selection-end-line="14" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/nju/shoppingOnline/servlet/HomeServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="17" column="8" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="8" />
+        <state relative-caret-position="159">
+          <caret line="24" column="4" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="26" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/nju/shoppingOnline/servlet/LoginServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/edu/nju/shoppingOnline/SpringContext.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="22" column="8" lean-forward="true" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="8" />
+        <state relative-caret-position="208">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/nju/shoppingOnline/servlet/RegisterServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/applicationContext.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="252">
+          <caret line="14" column="81" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/classes/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="81" selection-start-line="14" selection-start-column="81" selection-end-line="14" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="21" column="26" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/nju/shoppingOnline/servlet/CartServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="64" column="44" selection-start-line="64" selection-start-column="44" selection-end-line="64" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/nju/shoppingOnline/service/ShoppingCart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/nju/shoppingOnline/repository/UserRepo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1121,7 +532,7 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>webapp:war exploded</last-edited>
+          <last-edited>shoppingOnline:war exploded</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1134,7 +545,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Detection</last-edited>
+          <last-edited>Web</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1169,7 +580,19 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>Spring|webapp</last-edited>
+          <last-edited>Spring|shoppingOnline</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

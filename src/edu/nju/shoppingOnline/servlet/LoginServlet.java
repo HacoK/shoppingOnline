@@ -2,8 +2,12 @@ package edu.nju.shoppingOnline.servlet;
 
 import edu.nju.shoppingOnline.model.User;
 import edu.nju.shoppingOnline.repository.UserRepo;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 
-import javax.ejb.EJB;
+import javax.annotation.PostConstruct;
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -18,12 +22,15 @@ import java.io.PrintWriter;
 /**
  * Servlet implementation class LoginServlet
  */
+@Component
 @WebServlet(urlPatterns={"/Login/*","/Logout","/Leave","/Counter"})
 public class LoginServlet extends HttpServlet {
-    @EJB
+    @Autowired
     UserRepo userRepo;
-    public void init(){
+    public void init(ServletConfig config){
+        SpringBeanAutowiringSupport.processInjectionBasedOnServletContext(this, config.getServletContext());
     }
+
     public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException {
         User user=userRepo.getUser(req.getParameter("account"));
         if(user!=null){

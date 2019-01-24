@@ -1,9 +1,5 @@
 package edu.nju.shoppingOnline.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-
-@Entity
 public class Goods {
     private Integer gid;
     private String name;
@@ -11,7 +7,6 @@ public class Goods {
     private Double price;
     private Integer num;
 
-    @Id
     public Integer getGid() {
         return gid;
     }
